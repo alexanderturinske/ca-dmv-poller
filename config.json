@@ -13,6 +13,8 @@
         "telArea":    "",
         "telPrefix":  "",
         "telSuffix":  "",
+        "mode": "OfficeVisit",
+        "resetCheckFields": "true"
         "_comment":
             "ONLY HAVE TO FILL BELOW FOR BEHIND THE WHEEL TEST, two digit day/month",
         "dlNumber":   "",

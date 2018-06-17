@@ -279,13 +279,10 @@ function checkAppointmentResult(name, schedule) {
   return function(str) {
     var $ = cheerio.load(str);
 
-    var dateString = $('#ApptForm')
-                         .parent()
-                         .parent()
-                         .parent()
-                         .find('tr:nth-child(3) .alert')
-                         .text()
-                         .replace(' at ', ' ');
+    var dateString = $("td[data-title='Appointment']")
+                        .text()
+                        .split('on:')[1]
+                        .replace(" at "," ")
     console.log(name + ':\t' + dateString);
     if (!dateString) {
       displayErrors($);
